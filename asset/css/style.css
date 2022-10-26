@@ -1,0 +1,565 @@
+/* ====================================================================
+
+            Template Name: Cuda
+            Template URI: https://projects.khalidmahmud.me/cuda
+            Description:
+            Author: S.M. Khalid Mahmud
+            Author URI: https://khalidmahmud.me
+            Support: hello@khalidmahmud.me
+            Version: 1.0
+
+   ==================================================================== */
+
+/* ====================================================================
+
+            CSS INDEX
+            =========
+
+            1. Common
+            2. Header
+            3. Home
+            4. Service
+            5. Team
+            6. Skill
+            7. Portfolio
+            8. Testimonial
+            9. Contact
+            10. Footer
+
+   ==================================================================== */
+
+
+/* ===== 1. Common ===== */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Titillium Web", sans-serif;
+    line-height: 1.3;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+section:not(#home) {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+h1 {
+    font-size: 3.8rem;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 80px;
+    margin: 10px auto 0;
+}
+
+.section-title p {
+    width: 60%;
+    margin: auto;
+    font-size: 1.8rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff2b4a;
+    min-width: 220px;
+    padding: 12px 25px;
+    border: 1px solid #ff2b4a;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #ff2b4a;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+/* ===== 2. Header ===== */
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+header.sticky {
+    background-color: rgba(135, 80, 156, 0.9);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+.navbar-nav .nav-item:first-child {
+    margin-left: 0;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-link.active, .nav-link:hover {
+    background-color: #643a79;
+}
+
+/* ===== 3. Home ===== */
+#home {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url("../img/bg-home.jpg") fixed center / cover;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#home h1 {
+    color: #fff;
+}
+
+/* ===== 4. Service ===== */
+#service {
+    background: linear-gradient(rgba(23, 194, 164, 0.9), rgba(23, 194, 164, 0.9)), url("../img/bg-service.jpg") center top / cover;
+    color: #fff;
+}
+
+#service .section-title h2::after {
+    background-color: #14a58c;
+}
+
+#service .content-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+#service img {
+    height: 90px;
+}
+
+/* ===== 5. Team ===== */
+#team {
+    background: linear-gradient(rgba(231, 241, 248, 0.9), rgba(231, 241, 248, 0.9)), url("../img/bg-team.jpg") fixed center top / cover;
+}
+
+#team .section-title {
+    color: #3c4761;
+}
+
+#team .section-title h2::after {
+    background-color: #c8d9e5;
+}
+
+#team .content-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+#team .content-box img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+#team .content-box h3 {
+    color: #27283d;
+}
+
+#team .content-box span {
+    color: #30bae7;
+    font-size: 1.6rem;
+}
+
+#team .content-box .social-link {
+    margin-top: 25px;
+}
+
+#team .content-box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#team .content-box li {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+#team .content-box li:first-child {
+    margin-left: 0;
+}
+
+#team .content-box li:last-child {
+    margin-right: 0;
+}
+
+#team .content-box a {
+    color: #fff;
+    font-size: 2rem;
+}
+
+#team .content-box i::before {
+    display: inline-block;
+    background-color: #bdd1df;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#team .content-box a:hover i::before {
+    background-color: #393939;
+    transform: rotate(360deg);
+}
+
+/* ===== 6. Skill ===== */
+#skill {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/bg-skill.jpg") center / cover;
+}
+
+#skill .section-title {
+    color: #3c4761;
+}
+
+#skill .section-title h2::after {
+    background-color: rgba(223, 232, 237, 0.7);
+}
+
+#skill .content-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+#skill .content-box:nth-child(1) svg.radial-progress circle {
+    stroke: #30bae7;
+}
+
+#skill .content-box:nth-child(2) svg.radial-progress circle {
+    stroke: #d74680;
+}
+
+#skill .content-box:nth-child(3) svg.radial-progress circle {
+    stroke: #15c7a8;
+}
+
+#skill .content-box:nth-child(4) svg.radial-progress circle {
+    stroke: #eb7d4b;
+}
+
+#skill .content-box text {
+    fill: #30bae7;
+    font-size: 1.6rem;
+}
+
+#skill .content-box h3 {
+    color: #27283d;
+}
+
+/* ===== 7. Portfolio ===== */
+#portfolio {
+    background: linear-gradient(rgba(255, 221, 153, 0.9), rgba(255, 221, 153, 0.9)), url("../img/bg-portfolio.jpg") fixed center / cover;
+}
+
+#portfolio .section-title {
+    color: #3c4761;
+}
+
+#portfolio .section-title h2::after {
+    background-color: #e5c37f;
+}
+
+#portfolio .content-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 45px;
+}
+
+#portfolio .content-filter .filter-item {
+    display: inline-block;
+    background-color: #ebc985;
+    padding: 8px 20px;
+    margin: 2px;
+    border-radius: 5px;
+    color: #3c4761;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#portfolio .content-filter .filter-item.active {
+    background-color: #fff;
+    pointer-events: none;
+}
+
+#portfolio .content-filter .filter-item:hover {
+    box-shadow: inset 0 3px 5px rgba(60, 71, 97, 0.5);
+}
+
+#portfolio .content-box.show {
+    animation: cb-show 0.3s ease;
+}
+
+#portfolio .content-box.hide {
+    display: none;
+}
+
+@keyframes cb-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#portfolio .content-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+    text-align: center;
+}
+
+#portfolio .content-box img {
+    width: 100%;
+}
+
+#portfolio .content-box h3 {
+    color: #27283d;
+}
+
+/* ===== 8. Testimonial ===== */
+#testimonial {
+    background: linear-gradient(rgba(216, 85, 137, 0.9), rgba(216, 85, 137, 0.9)), url("../img/bg-testimonial.jpg") center / cover;
+    color: #fff;
+}
+
+#testimonial .section-title h2::after {
+    background-color: #c94176;
+}
+
+#testimonial .content-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+    margin-top: 70px;
+}
+
+#testimonial .content-box .img {
+    float: left;
+    width: 15%;
+}
+
+#testimonial .content-box img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#testimonial .content-box .info {
+    float: right;
+    width: 82%;
+    margin-left: 3%;
+}
+
+#testimonial .content-box p {
+    margin-top: 0;
+}
+
+#testimonial .content-box h3 {
+    color: #27283d;
+}
+
+#testimonial .content-box span {
+    color: #30bae7;
+    font-size: 1.6rem;
+}
+
+/* ===== 9. Contact ===== */
+#contact {
+    background: linear-gradient(rgba(60, 84, 153, 0.9), rgba(60, 84, 153, 0.9)), url("../img/bg-contact.jpg") fixed center / cover;
+    color: #fff;
+}
+
+#contact .section-title h2::after {
+    background-color: #273a71;
+}
+
+#contact .content-area form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "n e" "m m" "b b";
+    grid-gap: 15px;
+    width: 70%;
+    margin: auto;
+}
+
+#contact .name {
+    grid-area: n;
+}
+
+#contact .email {
+    grid-area: e;
+}
+
+#contact .message {
+    grid-area: m;
+}
+
+#contact .button {
+    grid-area: b;
+    text-align: center;
+}
+
+#contact label {
+    display: none;
+}
+
+#contact input, #contact textarea {
+    background-color: #273a71;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: 1px solid #273a71;
+    border-radius: 5px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.8rem;
+}
+
+#contact textarea {
+    resize: none;
+}
+
+/* ===== 10. Footer ===== */
+footer {
+    margin-top: auto;
+    background-color: #344b8e;
+    padding: 35px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+footer li:first-child {
+    margin-left: 0;
+}
+
+footer li:last-child {
+    margin-right: 0;
+}
+
+footer a {
+    color: #fff;
+    font-size: 2.4rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #30bae7;
+}

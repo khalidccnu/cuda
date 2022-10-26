@@ -1,0 +1,94 @@
+@media screen and (max-width: 1199px) {
+    /* ===== Common ===== */
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    /* ===== Common ===== */
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    /* ===== Header ===== */
+    .navbar-toggler {
+        display: block;
+        background-color: transparent;
+        min-width: 44px;
+        border: none;
+        color: #fff;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+
+    .navbar-toggler-icon:before {
+        content: "\f0c9";
+        font-family: "fontAwesome", sans-serif;
+    }
+
+    .navbar-toggler-icon.rm:before {
+        content: "\f00d";
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .navbar-nav.rm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 65%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 99999;
+    }
+
+    .navbar-nav.rm .nav-item {
+        margin: 0;
+    }
+
+    .navbar-nav.rm .nav-link.active, .navbar-nav.rm .nav-link:hover {
+        color: #643a79;
+        background-color: transparent;
+    }
+
+    /* ===== Service / Team / Skill ===== */
+    #service .content-area, #team .content-area, #skill .content-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /* ===== Common ===== */
+    html {
+        font-size: 50%;
+    }
+
+    section:is(#home) {
+        padding: 120px 0;
+    }
+
+    .section-title p {
+        width: auto;
+    }
+
+    .btn {
+        min-width: auto;
+    }
+
+    /* ===== Service / Team / Skill / Portfolio / Testimonial ===== */
+    #service .content-area, #team .content-area, #skill .content-area, #portfolio .content-area, #testimonial .content-area {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== Contact ===== */
+    #contact .content-area form {
+        width: auto;
+    }
+}
